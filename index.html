@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Universitas Satya Terra Bhinneka</title>
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+    <header class="custom-bg-green text-white text-center py-5">
+        <h2 class="fw-semibold">Universitas Satya Terra Bhinneka</h2>
+        <p class="mb-4">Gabung dan Raih Masa Depanmu Bersama Kami</p>
+        <button class="btn btn-success border-white show-form-btn px-4 py-2">Daftar Menjadi Mahasiswa Baru</button>
+    </header>
+
+    <div class="container my-5">
+        <div class="card p-4 shadow-sm mx-auto" style="max-width: 800px;">
+            <h5 class="mb-4 fw-bold">Kalkulator Biaya Kuliah</h5>
+            <input type="number" class="form-control mb-3 biaya-input" placeholder="Masukkan biaya per semester (cth: 5000000)">
+            <input type="number" class="form-control mb-4 semester-input" placeholder="Masukkan jumlah semester (cth: 2, 4, 6)">
+            <p class="fw-semibold text-success m-0">Total Biaya untuk <span class="semester-val">0</span> semester: Rp<span class="total-biaya">0</span></p>
+        </div>
+    </div>
+
+    <div class="modal-overlay">
+        <div class="bg-white p-4 rounded shadow w-100" style="max-width: 500px;">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h6 class="m-0 fw-bold text-secondary">Form Pendaftaran Mahasiswa Baru</h6>
+                <button class="btn btn-success btn-sm close-form-btn" style="width: 32px; height: 32px; font-weight: bold;">X</button>
+            </div>
+            <input type="text" class="form-control mb-3" placeholder="Nama">
+            <input type="number" class="form-control mb-3" placeholder="Umur">
+            <input type="text" class="form-control mb-3" placeholder="Asal Sekolah">
+            <select class="form-select mb-3 text-secondary">
+                <option>Pilih Jurusan</option>
+                <option>Informatika</option>
+                <option>Manajemen</option>
+            </select>
+            <input type="text" class="form-control mb-3" placeholder="Nama Orang Tua Laki-laki">
+            <input type="text" class="form-control mb-4" placeholder="Nama Orang Tua Perempuan">
+            <button class="btn btn-success w-100 custom-bg-green border-0 py-2">Kirim</button>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/script.js"></script>    
+</body>
+</html>
