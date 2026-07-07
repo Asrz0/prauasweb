@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Universitas Satya Terra Bhinneka</title>
     <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="bg-light">
 
-    <header class="custom-bg-green text-white text-center py-5">
+    <header class="bg-success text-white text-center py-5">
         <h2 class="fw-semibold">Universitas Satya Terra Bhinneka</h2>
         <p class="mb-4">Gabung dan Raih Masa Depanmu Bersama Kami</p>
-        <button class="btn btn-success border-white show-form-btn px-4 py-2">Daftar Menjadi Mahasiswa Baru</button>
+        <button class="btn btn-outline-light px-4 py-2" data-bs-toggle="modal" data-bs-target="#modalPendaftaran">
+            Daftar Menjadi Mahasiswa Baru
+        </button>
     </header>
 
     <div class="container my-5">
@@ -24,28 +25,32 @@
         </div>
     </div>
 
-    <div class="modal-overlay">
-        <div class="bg-white p-4 rounded shadow w-100" style="max-width: 500px;">
-            <div class="d-flex justify-content-between align-items-center mb-4">
-                <h6 class="m-0 fw-bold text-secondary">Form Pendaftaran Mahasiswa Baru</h6>
-                <button class="btn btn-success btn-sm close-form-btn" style="width: 32px; height: 32px; font-weight: bold;">X</button>
+    <div class="modal fade" id="modalPendaftaran" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-6 fw-bold text-secondary" id="modalTitle">Form Pendaftaran Mahasiswa Baru</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" class="form-control mb-3" placeholder="Nama">
+                    <input type="number" class="form-control mb-3" placeholder="Umur">
+                    <input type="text" class="form-control mb-3" placeholder="Asal Sekolah">
+                    <select class="form-select mb-3 text-secondary">
+                        <option>Pilih Jurusan</option>
+                        <option>Informatika</option>
+                        <option>Manajemen</option>
+                    </select>
+                    <input type="text" class="form-control mb-3" placeholder="Nama Orang Tua Laki-laki">
+                    <input type="text" class="form-control mb-4" placeholder="Nama Orang Tua Perempuan">
+                    
+                    <button id="btnKirim" class="btn btn-success w-100 py-2">Kirim</button>
+                </div>
             </div>
-            <input type="text" class="form-control mb-3" placeholder="Nama">
-            <input type="number" class="form-control mb-3" placeholder="Umur">
-            <input type="text" class="form-control mb-3" placeholder="Asal Sekolah">
-            <select class="form-select mb-3 text-secondary">
-                <option>Pilih Jurusan</option>
-                <option>Informatika</option>
-                <option>Manajemen</option>
-            </select>
-            <input type="text" class="form-control mb-3" placeholder="Nama Orang Tua Laki-laki">
-            <input type="text" class="form-control mb-4" placeholder="Nama Orang Tua Perempuan">
-            
-            <button id="btnKirim" class="btn btn-success w-100 custom-bg-green border-0 py-2">Kirim</button>
         </div>
     </div>
     
     <script src="js/bootstrap.bundle.js"></script>
-    <script src="js/script.js"></script>    
+    <script src="js/script.js"></script>
 </body>
 </html>
